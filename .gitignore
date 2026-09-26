@@ -1,0 +1,9 @@
+node_modules/
+public/
+.DS_Store
+.obsidian/
+private/
+.quartz-engine/node_modules/
+.quartz-engine/public/
+.quartz-engine/.quartz/
+.quartz-engine/.quartz-cache/

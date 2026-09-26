@@ -1,0 +1,204 @@
+{
+  "nodes": [
+    {
+      "id": "thesis",
+      "type": "file",
+      "file": "index.md",
+      "x": 400,
+      "y": 0,
+      "width": 320,
+      "height": 80,
+      "color": "5"
+    },
+    {
+      "id": "hardware",
+      "type": "file",
+      "file": "layers/hardware.md",
+      "x": 0,
+      "y": 160,
+      "width": 240,
+      "height": 80,
+      "color": "1"
+    },
+    {
+      "id": "data-center",
+      "type": "file",
+      "file": "layers/data-center.md",
+      "x": 280,
+      "y": 160,
+      "width": 240,
+      "height": 80,
+      "color": "1"
+    },
+    {
+      "id": "kernels",
+      "type": "file",
+      "file": "layers/kernels.md",
+      "x": 560,
+      "y": 160,
+      "width": 240,
+      "height": 80,
+      "color": "1"
+    },
+    {
+      "id": "compilers",
+      "type": "file",
+      "file": "layers/compilers-and-runtimes.md",
+      "x": 840,
+      "y": 160,
+      "width": 260,
+      "height": 80,
+      "color": "1"
+    },
+    {
+      "id": "engines",
+      "type": "file",
+      "file": "layers/inference-engines.md",
+      "x": 200,
+      "y": 320,
+      "width": 260,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "distributed",
+      "type": "file",
+      "file": "layers/distributed-orchestration.md",
+      "x": 520,
+      "y": 320,
+      "width": 280,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "scheduling",
+      "type": "file",
+      "file": "layers/scheduling.md",
+      "x": 840,
+      "y": 320,
+      "width": 240,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "model",
+      "type": "file",
+      "file": "layers/model.md",
+      "x": 120,
+      "y": 480,
+      "width": 240,
+      "height": 80,
+      "color": "3"
+    },
+    {
+      "id": "api",
+      "type": "file",
+      "file": "layers/api.md",
+      "x": 920,
+      "y": 480,
+      "width": 200,
+      "height": 80,
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-thesis-hw",
+      "fromNode": "thesis",
+      "fromSide": "bottom",
+      "toNode": "hardware",
+      "toSide": "top"
+    },
+    {
+      "id": "e-thesis-dc",
+      "fromNode": "thesis",
+      "fromSide": "bottom",
+      "toNode": "data-center",
+      "toSide": "top"
+    },
+    {
+      "id": "e-thesis-kern",
+      "fromNode": "thesis",
+      "fromSide": "bottom",
+      "toNode": "kernels",
+      "toSide": "top"
+    },
+    {
+      "id": "e-thesis-comp",
+      "fromNode": "thesis",
+      "fromSide": "bottom",
+      "toNode": "compilers",
+      "toSide": "top"
+    },
+    {
+      "id": "e-hw-dc",
+      "fromNode": "hardware",
+      "fromSide": "right",
+      "toNode": "data-center",
+      "toSide": "left"
+    },
+    {
+      "id": "e-hw-kern",
+      "fromNode": "hardware",
+      "fromSide": "right",
+      "toNode": "kernels",
+      "toSide": "left"
+    },
+    {
+      "id": "e-kern-comp",
+      "fromNode": "kernels",
+      "fromSide": "right",
+      "toNode": "compilers",
+      "toSide": "left"
+    },
+    {
+      "id": "e-comp-eng",
+      "fromNode": "compilers",
+      "fromSide": "bottom",
+      "toNode": "engines",
+      "toSide": "top"
+    },
+    {
+      "id": "e-eng-dist",
+      "fromNode": "engines",
+      "fromSide": "right",
+      "toNode": "distributed",
+      "toSide": "left"
+    },
+    {
+      "id": "e-eng-sched",
+      "fromNode": "engines",
+      "fromSide": "right",
+      "toNode": "scheduling",
+      "toSide": "left"
+    },
+    {
+      "id": "e-dist-sched",
+      "fromNode": "distributed",
+      "fromSide": "right",
+      "toNode": "scheduling",
+      "toSide": "left"
+    },
+    {
+      "id": "e-model-kern",
+      "fromNode": "model",
+      "fromSide": "top",
+      "toNode": "kernels",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e-model-eng",
+      "fromNode": "model",
+      "fromSide": "top",
+      "toNode": "engines",
+      "toSide": "bottom"
+    },
+    {
+      "id": "e-api-sched",
+      "fromNode": "api",
+      "fromSide": "top",
+      "toNode": "scheduling",
+      "toSide": "bottom"
+    }
+  ]
+}

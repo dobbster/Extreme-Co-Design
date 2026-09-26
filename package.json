@@ -1,0 +1,21 @@
+{
+  "name": "extreme-co-design",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Knowledge graph on GPU inference extreme co-design (Quartz 5)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dobbster/Extreme-Co-Design.git"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=10.9.2"
+  },
+  "scripts": {
+    "setup": "node scripts/setup-engine.mjs",
+    "build": "node scripts/run-quartz.mjs build",
+    "serve": "node scripts/run-quartz.mjs build --serve",
+    "postinstall": "node scripts/setup-engine.mjs"
+  }
+}
